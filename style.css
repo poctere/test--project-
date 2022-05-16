@@ -1,0 +1,247 @@
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+
+#universe{
+    background: radial-gradient( #555, #000 );  
+}
+
+/* 星星 */
+@keyframes starblink {
+    from {opacity: 1;}
+    to {opacity: 0.3;}
+}
+
+#stars{
+    height: 100%;
+    background-image:url("./images/stars.png");
+    background-size: cover;
+    animation: starblink 1.5s infinite alternate;
+}
+
+/* 流星 */
+@keyframes cometshooting {
+    0% {opacity: 1; top:0%; left:100%;}
+    25% {opacity: 1;}
+    50% {opacity: 0.1;}
+    100%{opacity: 0.1;top: 100%; left:0%;}
+}
+
+#comet{
+    position: absolute;
+    filter: drop-shadow(0px 0px 20px #fafafa);
+    filter: drop-shadow(0px 0px 25px #de8bf7);
+    animation: cometshooting  4s ease-out infinite ;
+}
+
+
+/* 太陽動態發散發光 */
+@keyframes twinkling {
+    from {filter: drop-shadow(0 0 20px #f5c91a);}
+    to {filter: drop-shadow(0 0 150px #f5c91a);}    
+}
+
+/* 太陽 */
+#sun{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -40px;
+    animation: twinkling 1s linear infinite alternate;
+}
+
+/* 自轉動畫 */
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+/* 水星 */
+#mercuryorbit{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -70px;
+    margin-left: -70px;
+    border: 1px solid #836C6C;
+    border-radius: 50%;
+    animation: rotate 6s infinite linear;
+}
+
+#mercury{
+    margin-top: 55px;
+    margin-left: -15px;
+    filter: drop-shadow(0px 0px 2px #db6a3d);
+    animation: rotate 4s infinite linear;
+}
+
+/* 金星 */
+#venusorbit{
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -110px;
+    margin-left: -110px;
+    border: 1px solid #836C6C;
+    border-radius: 50%;
+    animation: rotate 8s infinite linear;
+}
+
+#venus{
+    margin-top: -20px;
+    margin-left: 90px;
+    filter: drop-shadow(0px 0px 3px #e9b171);
+    animation: rotate 5s infinite linear;
+}
+
+
+/* 地球 */
+#earthorbit{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -175px;
+    border: 1px solid #836C6C;
+    border-radius: 50%;
+    animation: rotate 10s infinite linear;
+}
+
+#earth{
+    margin-top: 155px;
+    margin-left: 330px;
+    filter: drop-shadow(0px 0px 6px #81a8cc);
+    animation: rotate 7s infinite linear;
+}
+
+/* 月亮 */
+#moonorbit{
+    width: 70px;
+    height: 70px;
+    margin-top: -58px;
+    margin-left: 315px;
+    border: 1px solid #836C6C;
+    border-radius: 50%;
+    animation: rotate 2s infinite linear;
+}
+
+#moon{
+    margin-top: -0px;
+    margin-left: -0px;
+    filter: drop-shadow(0px 0px 5px #f5c91a);
+}
+
+
+/* 火星 */
+#marsorbit{
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -240px;
+    margin-left: -240px;
+    border: 1px solid #836C6C;
+    border-radius: 50%;
+    animation: rotate 13s infinite linear;
+}
+
+#mars{
+    margin-top: 467.5px;
+    margin-left: 227.5px;
+    filter: drop-shadow(0px 0px 3px #e95542);
+    animation: rotate 9s infinite linear;
+}
+
+/* 木星 */
+#jupiterorbit{
+    width: 580px;
+    height: 580px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -290px;
+    margin-left: -290px;
+    border: 1px solid #836C6C;
+    border-radius: 50%;
+    animation: rotate 15s infinite linear;
+}
+
+#jupiter{
+    margin-top: 260px;
+    margin-left: -30px;
+    filter: drop-shadow(0px 0px 4px #e2873c);
+    animation: rotate 11s infinite linear;
+}
+
+/* 土星 */
+#saturnorbit{
+    width: 720px;
+    height: 720px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -360px;
+    margin-left: -360px;
+    border: 1px solid #836C6C;
+    border-radius: 50%;
+    animation: rotate 18s infinite linear;
+}
+
+#saturn{
+    margin-top: -26px;
+    margin-left: 317.5px;
+    filter: drop-shadow(0px 0px 8px #c5a334);
+    animation: rotate 13s infinite linear;
+}
+
+/* 天王星 */
+#uranusorbit{
+    width: 880px;
+    height: 880px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -440px;
+    margin-left: -440px;
+    border: 1px solid #836C6C;
+    border-radius: 50%;
+    animation: rotate 22s infinite linear;
+}
+
+#uranus{
+    margin-top: 420px;
+    margin-left: 838.5px;
+    filter: drop-shadow(0px 0px 8px #7ed8a6);
+    animation: rotate 16s infinite linear;
+}
+
+
+/* 海王星 */
+#neptuneorbit{
+    width: 1050px;
+    height: 1050px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -525px;
+    margin-left: -525px;
+    border: 1px solid #836C6C;
+    border-radius: 50%;
+    animation: rotate 25s infinite linear;
+}
+
+#neptune{
+    margin-top: 502.5px;
+    margin-left: -22.5px;
+    filter: drop-shadow(0px 0px 8px #7eadd8);
+    animation: rotate 18s infinite linear;
+}
